@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logbg.png"> 
+	
+	<title> Ergon Design + Build </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+
+    <!-- Header section starts -->
+<header>
+
+<input type="checkbox" name="" id="toggler">
+<label for="toggler" class="fas fa-bars"></label>
+
+<nav class="navbar">
+
+  <ul>
+  <li ><a href="index.html"> Home &nbsp;<i class="fa fa-hotel"></i></a></li>
+  <li ><a href="About.html"> About &nbsp;<i class="fa fa-user-secret"></i></a></li>
+  <li class="active"><a href="project.html"> Projects &nbsp;<i class="fa fa-door-open"></i></a></li>
+  <li><a href="Contact.html"> Contact &nbsp;<i class="fa fa-id-card"></i></a></li>
+  </ul >
+ </nav>
+
+ <a href="index.html" class="logo"><img src="log2.png" alt="ergon" style="width:300px;height:80px;"></a>
+
+</header> 
+<!-- Header section ends -->
+
+
+    
+    <div class="slider">
+
+
+        <div class="list">
+
+            <div class="item">
+			
+                <img src="img1.jpg" alt="" id="projectA">
+				
+
+                <div class="content">
+				    <label class="update" for="input-fileA">update image</label>
+				    <input type="file" accept="image/jpg, image/png, image/jpeg" id="input-fileA">
+					
+                    <textarea id="textBoxtitle" class="type"  placeholder="Title"></textarea>
+                    <textarea id="textBoxdisc" class="description" placeholder="Discription"></textarea>
+                    <div class="button">
+                        <button>Explore</button>
+						
+						
+                    </div>
+                </div>
+				
+            </div>
+
+            <div class="item">
+                <img src="img2.jpg" alt="" id="projectB">
+
+                <div class="content">
+				<label class="update" for="input-fileB">update image</label>
+				    <input type="file" accept="image/jpg, image/png, image/jpeg" id="input-fileB">
+					
+                     <textarea id="textBoxtitle" class="type" placeholder="Title"></textarea>
+                    <textarea id="textBoxdisc" class="description" placeholder="Discription"></textarea>
+                    <div class="button">
+                        <button>Explore</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img3.jpg" alt="" id="projectC">
+
+                <div class="content">
+				<label class="update" for="input-fileC">update image</label>
+				    <input type="file" accept="image/jpg, image/png, image/jpeg" id="input-fileC">
+					
+                     <textarea id="textBoxtitle" class="type" placeholder="Title"></textarea>
+                    <textarea id="textBoxdisc" class="description" placeholder="Discription"></textarea>
+                    <div class="button">
+                        <button>Explore</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img4.jpg" alt="" id="projectD">
+
+                <div class="content">
+				<label class="update" for="input-fileD">update image</label>
+				    <input type="file" accept="image/jpg, image/png, image/jpeg" id="input-fileD">
+					
+                  <textarea id="textBoxtitle" class="type" placeholder="Title"></textarea>
+                    <textarea id="textBoxdisc" class="description" placeholder="Discription"></textarea>
+                    <div class="button">
+                        <button>Explore</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="thumbnail">
+
+            <div class="item">
+                <img src="img1.jpg" alt="" id="thumbnailA">
+				<input type="file" accept="image/jpg, image/png, image/jpeg" id="input-fileA">
+				
+            </div>
+            <div class="item">
+                <img src="img2.jpg" alt="" id="thumbnailB">
+				<input type="file" accept="image/jpg, image/png, image/jpeg" id="input-fileB">
+            </div>
+            <div class="item">
+                <img src="img3.jpg" alt="" id="thumbnailC">
+				<input type="file" accept="image/jpg, image/png, image/jpeg" id="input-fileC">
+            </div>
+            <div class="item">
+                <img src="img4.jpg" alt="" id="thumbnailD">
+				<input type="file" accept="image/jpg, image/png, image/jpeg" id="input-fileD">
+            </div>
+
+        </div>
+
+
+        <div class="nextPrevArrows">
+            <button class="prev"> < </button>
+            <button class="next"> > </button>
+        </div>
+
+
+    </div>
+
+
+
+<script>
+				let projectA = document.getElementById("projectA");
+				let thumbnailA = document.getElementById("thumbnailA");
+				let inputFileA = document.getElementById("input-fileA");
+				
+				inputFileA.onchange = function(){
+				  projectA.src = URL.createObjectURL(inputFileA.files[0]);
+				  thumbnailA.src = URL.createObjectURL(inputFileA.files[0]);
+				  }
+				  </script>
+				  
+<script>
+				let projectB = document.getElementById("projectB");
+				let thumbnailB = document.getElementById("thumbnailB");
+				let inputFileB = document.getElementById("input-fileB");
+				
+				inputFileB.onchange = function(){
+				  projectB.src = URL.createObjectURL(inputFileB.files[0]);
+				  thumbnailB.src = URL.createObjectURL(inputFileB.files[0]);
+				  }
+				  </script>
+				  
+<script>
+				let projectC = document.getElementById("projectC");
+				let thumbnailC = document.getElementById("thumbnailC");
+				let inputFileC = document.getElementById("input-fileC");
+				
+				inputFileC.onchange = function(){
+				  projectC.src = URL.createObjectURL(inputFileC.files[0]);
+				  thumbnailC.src = URL.createObjectURL(inputFileC.files[0]);
+				  }
+				  </script>
+				  
+<script>
+				let projectD = document.getElementById("projectD");
+				let thumbnailD = document.getElementById("thumbnailD");
+				let inputFileD = document.getElementById("input-fileD");
+				
+				inputFileD.onchange = function(){
+				  projectD.src = URL.createObjectURL(inputFileD.files[0]);
+				  thumbnailD.src = URL.createObjectURL(inputFileD.files[0]);
+				  }
+				  </script>
+
+    <script src="js/app1.js"></script>
+</body>
+</html>

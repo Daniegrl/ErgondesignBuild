@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    margin: 0;
+    background-color: #000;
+    color: #eee;
+    font-family: Poppins;
+    font-size: 12px;
+}
+
+a{
+    text-decoration: none;
+}
+
+:root{
+	--khaki: #f0e68c;
+}
+
+*{
+	margin: 0; 
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	text-transform: capitalize;
+	transition: .2s linear;
+}
+
+html{
+	font-size: 62.5%; 
+	scroll-behavior: smooth; 
+	scroll-padding-top: 6rem; 
+	overflow-x: hidden;
+}
+
+section{
+	padding:2rem 9%;
+}
+
+.btn{
+display: inline-block; 
+margin-top: 1rem;
+border-radius: 10rem; 
+background: #e3dac9;
+padding:.5rem 1rem;
+cursor: pointer;
+font-size: 2.7rem;
+}
+
+.btn:hover{
+background: #bb6528;
+}
+
+header{
+position: fixed;
+top: 0; 
+left:0; 
+right:0;
+background: transparent;
+backdrop-filter: blur(20px);
+padding: .9rem 9%; 
+display: flex; 
+align-items: center;
+justify-content: space-between;
+z-index: 1000;
+box-shadow: 0.1rem .5rem rgba(0,0,0,.1);
+}	
+
+header .logo{
+font-size: 3rem;
+color: #333;
+font-weight: bolder;
+}
+
+header .logo span{
+color:var(--khaki);
+}
+
+header .navbar a{
+font-size: 2rem;
+padding:0 1.5rem; 
+color:#666;
+ 
+}
+
+header .navbar a:hover{
+color:var(--khaki);
+}
+
+.icons a{
+font-size: 1.5rem;
+color: #333;
+margin-left: 1.5rem;
+}
+
+.icons a:hover{
+color:var(--khaki);
+}
+
+header #toggler{
+	display: none;
+}
+
+header .fa-bars{
+	font-size: 3rem;
+	color: #333;
+	border-radius: .5rem;
+	padding: .5rem 1.5rem;
+	cursor: pointer;
+	border: .1rem solid rgba(0,0,0,.3);
+	display: none;
+}
+
+.navbar{
+       width:100%;
+       margin:auto;
+       padding: 35px 0;
+       font-size: 10px;
+	color: #000;         
+}
+
+.navbar ul li{
+	display: inline-block;
+        list-style: none;
+        margin: 0 20px;
+        position: relative;
+
+       
+        
+}
+
+.navbar ul li a{
+	text-decoration: none;
+	color: #000;
+	padding: 5px 20px;
+	transition: 0.5s;
+
+}
+
+.navbar ul li::after{
+        content:'';
+	    height: 3px;
+        width: 0%;
+        background: #bb6528;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.5s;
+
+}
+
+.navbar ul li:hover::after{
+	width: 100%;
+
+}
+
+ul li.active a{
+	color:#da9100;
+
+}
+
+.home .content{
+	max-width: 50rem;
+}
+
+.home .content h3{
+	font-size: 6rem;
+	color: #000;
+}
+
+.home .content p{
+font-size: 1.8rem;
+color:#000;
+padding: 1rem 1;
+line-height: 1.5;
+}
+
+/* media queries */
+@media (max-width:991px){
+	html{
+		font-size: 55%;
+	}
+	
+	header{
+		padding: 2rem;
+	}
+}
+
+@media (max-width:768px) {
+	header .fa-bars {
+		display: block;
+	}
+	
+	header .navbar {
+		position: absolute;
+		top: 100%; left: 0%; right: 0%;
+		background-image:linear-gradient(#f5deb3,transparent);
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	}
+	
+	header #toggler:checked ~ .navbar {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+	}
+	
+	header .navbar a {
+		margin: 1.5rem;
+		padding: 1.5rem;
+		display: block;
+	}
+ }
+
+
+
+
+
+@media (max-width:450px) {
+	html{
+		font-size: 50%;
+	}
+}
+
+
+/* slider section  */
+
+.slider{
+    height: 100vh;
+    margin-top: -0px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.slider .list .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+.slider .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider .list .item .content{
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+
+.slider .list .item .content .title,
+.slider .list .item .content .type{
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+.slider .list .item .type{
+    color: #da9100;
+}
+.slider .list .item .button{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 30px;
+}
+.slider .list .item .button button{
+    border: none;
+    background-color: rgb(211,211,211);
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.4s;
+    letter-spacing: 2px;
+}
+.slider .list .item .button button:hover{
+    background-color: #bb6528;
+    color: var(--khaki);
+}
+
+
+.slider .list .item .button button:hover{
+    letter-spacing: 3px;
+}
+.slider .list .item .button button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+
+
+.update {
+	display: block;
+	width: 150px;
+	background: transparent;
+	color: var(--khaki);
+	padding: 12px;
+	margin: 5px auto;
+	border-radius: 2px;
+	border: .5rem solid #bb6528;
+	cursor: pointer;
+}
+	
+input { 
+    display: none;
+}
+
+#textBoxtitle{
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	border: none;
+	outline: none;
+	background: transparent;
+}
+
+#textBoxdisc{
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	border: none;
+	outline: none;
+	background: transparent;
+	color: #fff;
+}
+
+
+
+/* Thumbnail Section  */
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+
+.thumbnail .item{
+    width: 150px;
+    height: 160px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* nextPrevArrows Section  */
+.nextPrevArrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+	
+}
+.nextPrevArrows button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+	border: 2px solid #da9100;
+    background-color: rgb(211,211,211);
+    color: #da9100;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+}
+.nextPrevArrows button:hover{
+    background-color: #bb6528;
+    color: var(--khaki);
+}
+
+/* Animation Part */
+.slider .list .item:nth-child(1){
+    z-index: 1;
+}
+
+
+/* animation text in first item */
+.slider .list .item:nth-child(1) .content .title,
+.slider .list .item:nth-child(1) .content .type,
+.slider .list .item:nth-child(1) .content .description,
+.slider .list .item:nth-child(1) .content .buttons
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+.slider .list .item:nth-child(1) .content .title{
+    animation-delay: 0.4s !important;
+}
+.slider .list .item:nth-child(1) .content .type{
+    animation-delay: 0.6s !important;
+}
+.slider .list .item:nth-child(1) .content .description{
+    animation-delay: 0.8s !important;
+}
+.slider .list .item:nth-child(1) .content .buttons{
+    animation-delay: 1s !important;
+}
+
+
+
+
+/* Animation for next button click */
+.slider.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.slider.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.slider.prev .list .item img{
+    z-index: 100;
+}
+prev
+
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+
+
+.slider.next .thumbnail{
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+
+
+/* Animation for prev button click */
+.slider.prev .list .item:nth-child(2){
+    z-index: 2;
+}
+
+.slider.prev .list .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.slider.prev .thumbnail .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.slider.next .nextPrevArrows button,
+.slider.prev .nextPrevArrows button{
+    pointer-events: none;
+}
+
+
+.slider.prev .list .item:nth-child(2) .content .title,
+.slider.prev .list .item:nth-child(2) .content .type,
+.slider.prev .list .item:nth-child(2) .content .description,
+.slider.prev .list .item:nth-child(2) .content .buttons
+{
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 678px) {
+    .slider .list .item .content{
+        padding-right: 0;
+    }
+    .slider .list .item .content .title{
+        font-size: 50px;
+    }
+}
